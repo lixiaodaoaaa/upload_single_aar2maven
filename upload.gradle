@@ -1,0 +1,36 @@
+apply plugin: "base"
+apply plugin: "maven"
+apply plugin: "maven-publish"
+
+
+repositories {
+    maven { url defaultRepository }
+}
+
+task assembleArtifact(type: Zip, group: 'DB') {
+    archiveName 'db.zip'
+    destinationDir file("$buildDir/libs/")
+    from "src/main/sql"
+    description "Assemble archive $archiveName into ${relativePath(destinationDir)}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact source: assembleArtifact, extension: 'zip'
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username nexusUsername
+                password nexusPassword
+            }
+            url nexusRepo
+        }
+    }
+}
+
+assemble.dependsOn assembleArtifact
+build.dependsOn assemble
+publish.dependsOn build
