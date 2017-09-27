@@ -1,6 +1,6 @@
 ##  项目使用说明
 
- > 本项目用于将单独的aar文件上传到maven仓库。本工程默认是上传到本地nexus空间。默认地址为：[http://127.0.0.1:8081/nexus/content/groups/public/](http://127.0.0.1:8081/nexus/content/groups/public/) 有需要的可以用此工程将aar发布到maven仓库中。SNAPSHOT文件不支持手动上传可以用此工具 上传哦！by : Dagger
+ > 本项目用于将单独的aar文件上传到maven仓库。本工程默认是上传到本地nexus空间。默认地址为：[http://127.0.0.1:8081/nexus/content/groups/public/](http://127.0.0.1:8081/nexus/content/groups/public/) 有需要的可以用此工程将aar发布到maven仓库中。SNAPSHOT文件不支持手动上传可以用此工具 上传哦！
 
 *  支持 aar 文件上传
 *  支持 aar snapshot版本上传
@@ -12,10 +12,7 @@
 | develop    | 开发分支 |   feat分支的东西 过来merge |
 | feat/uplaodtest | feat 分支 成功后 移动到develop分支      |   已上传成功 |
 
-作者：Te_Lee
-链接：http://www.jianshu.com/p/1e402922ee32/
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 ## 项目配置需求
 
@@ -45,3 +42,7 @@
 ![项目运行结果如下](http://owx00rmbo.bkt.clouddn.com/publis_success.png)
 
 ![到maven 私服查看如下： ](http://owx00rmbo.bkt.clouddn.com/up_nexus.png)
+
+## 任何问题 请通过如下方式联系我：
+ * http://www.weibo.com/lixiaodaoaaa
+ * lixiaodaoaaa@126.com
