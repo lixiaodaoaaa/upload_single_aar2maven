@@ -43,7 +43,7 @@
 
 ## 上传成功截图如下：
 ![项目运行结果如下](http://owx00rmbo.bkt.clouddn.com/publis_success.png)
-
+***
 ![到maven 私服查看如下： ](http://owx00rmbo.bkt.clouddn.com/up_nexus.png)
 
 ## 任何问题 请通过如下方式联系我：
