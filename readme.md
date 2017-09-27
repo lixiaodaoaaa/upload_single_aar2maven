@@ -35,7 +35,8 @@
  gradle publish
  ```
 
-
+***
+![成功上传](http://owx00rmbo.bkt.clouddn.com/up_nexus.png)
 或者
 ```
 ./gradlew publish
@@ -43,8 +44,7 @@
 
 ## 上传成功截图如下：
 ![](http://owx00rmbo.bkt.clouddn.com/publis_success.png)
-***
-![](http://owx00rmbo.bkt.clouddn.com/up_nexus.png)
+
 
 ## 任何问题 请通过如下方式联系我：
  * http://www.weibo.com/lixiaodaoaaa
