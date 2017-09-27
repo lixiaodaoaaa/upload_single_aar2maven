@@ -4,20 +4,23 @@ apply plugin: "maven-publish"
 
 
 repositories {
-    maven { url defaultRepository }
+    maven { url maven_url }
 }
 
-task assembleArtifact(type: Zip, group: 'DB') {
-    archiveName 'db.zip'
+task assembleArtifact(type: Zip, group: 'want_group') {
+    archiveName 'http-2.0-SNAPSHOT.aar'
+    from "aar/http-2.0-SNAPSHOT.aar"
     destinationDir file("$buildDir/libs/")
-    from "src/main/sql"
     description "Assemble archive $archiveName into ${relativePath(destinationDir)}"
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifact source: assembleArtifact, extension: 'zip'
+            groupId 'com.want.model'
+            artifactId 'http'
+            version '2.0-SNAPSHOT'
+            artifact source: assembleArtifact, extension: 'aar'
         }
     }
     repositories {
@@ -26,10 +29,16 @@ publishing {
                 username nexusUsername
                 password nexusPassword
             }
-            url nexusRepo
+            url nexusSnapshotRepo
         }
     }
 }
+
+task copyAar(type: Copy) {
+    from(new File('aar')) { include '**/*.aar' }
+    into new File(buildDir, 'libs')
+}
+
 
 assemble.dependsOn assembleArtifact
 build.dependsOn assemble
