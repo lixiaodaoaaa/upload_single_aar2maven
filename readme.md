@@ -1,6 +1,7 @@
 ##  项目使用说明
 
  > 本项目用于将单独的aar文件上传到maven仓库。本工程默认是上传到本地nexus空间。默认地址为：[http://127.0.0.1:8081/nexus/content/groups/public/](http://127.0.0.1:8081/nexus/content/groups/public/) 有需要的可以用此工程将aar发布到maven仓库中。SNAPSHOT文件不支持手动上传可以用此工具 上传哦！
+ 需要将上传的文件copy到aar目录下，更改相应的build.gradle文件即可。
 
 *  支持 aar 文件上传
 *  支持 aar snapshot版本上传
@@ -22,6 +23,8 @@
 * 本地有maven仓库服务器 或者 有私服 maven服务器
 * 电脑为mac 或者windows 本作者刚好用了 mac  ^_^
 * 需要在gradle.properties里配置 上传的用户名和密码及url。我已配好。
+
+* 用AndroidStudio打开此项目然后将需要上传的aar copy到aar目录下。
 
 ## 运行说明
  * 可以在控制台运行 gradle copyAar
