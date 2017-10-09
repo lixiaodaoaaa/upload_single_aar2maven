@@ -5,7 +5,6 @@
 /build
 /captures
 *.hprof
-aar/
 gradle/
 gradlew
 gradlew.bat
